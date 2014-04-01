@@ -123,7 +123,7 @@ Public Class Form1
             Next
             For Each ctrl In Me.Panel2.Controls
                 If TypeOf ctrl Is NSTextBox Then inisettings.WriteString("SendKey", ctrl.name.replace("NsTextBox", "Send"), ctrl.Text)
-                If TypeOf ctrl Is TextBox Then If ctrl.text = Nothing Then inisettings.WriteString("HotKey", ctrl.name.replace("TextBox", "Key"), ctrl.text.ToString)
+                If TypeOf ctrl Is TextBox Then If Not ctrl.text = Nothing Then inisettings.WriteString("HotKey", ctrl.name.replace("TextBox", "Key"), ctrl.text.ToString)
                 If TypeOf ctrl Is NSOnOffBox Then inisettings.WriteString("Activate", ctrl.name.replace("NsOnOffBox", "act"), ctrl.checked.ToString)
             Next
             For Each ctrl In Me.NsTabControl1.TabPages(2).Controls
