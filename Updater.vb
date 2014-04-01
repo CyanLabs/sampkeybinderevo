@@ -9,18 +9,14 @@
             Next
         End If
         Try
-            Dim latestversion As String = wc.DownloadString("http://downloads.cyanlabs.co.uk/version.php?product=" & product).Replace(" ", "")
+            Dim latestversion As String = wc.DownloadString("http://cyanlabs.co.uk/raw/version.php?product=" & product).Replace(" ", "")
             If localversion < latestversion Then
-                Dim changelog As String = wc.DownloadString("http://changelog.cyanlabs.co.uk?product=" & product & "&from=" & localversion & "&to=" & latestversion)
-                If changelog.Length > 11 Then
-                    changelog = changelog.Substring(0, changelog.Length - 11).Replace("<br/><br/>", vbNewLine & vbNewLine).Replace("<br/>", "")
-                Else
-                    changelog = changelog.Replace("<br/><br/>", vbNewLine & vbNewLine).Replace("<br/>", "")
-                End If
+                Dim changelog As String = wc.DownloadString("http://cyanlabs.co.uk/raw/changelog.php?product=" & product & "&from=" & localversion & "&to=" & latestversion)
+                changelog = changelog.Replace("<br/><br/>", vbNewLine & vbNewLine).Replace("<br/>", vbNewLine)
                 If MsgBox("A new update is available for download" & vbNewLine & vbNewLine & "Would you like to download v" & latestversion & "?" & vbNewLine & vbNewLine & changelog, MsgBoxStyle.Information + MsgBoxStyle.YesNo, "Update Avaliable") = vbYes Then
                     If IO.File.Exists(Application.StartupPath & "\AutoUpdater.exe") Then
                         Dim updaterversion As FileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(Application.StartupPath & "\AutoUpdater.exe")
-                        If updaterversion.FileVersion < wc.DownloadString("http://downloads.cyanlabs.co.uk/version.php?product=AutoUpdater").Replace(" ", "") Then
+                        If updaterversion.FileVersion < wc.DownloadString("http://cyanlabs.co.uk/raw/version.php?product=AutoUpdater").Replace(" ", "") Then
                             DownloadUpdater(latestversion)
                         Else
                             Process.Start(Application.StartupPath & "\AutoUpdater.exe ", "-product=" & product & " -v=" & latestversion)

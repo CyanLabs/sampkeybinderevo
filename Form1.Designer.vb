@@ -26,6 +26,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.timer360 = New System.Windows.Forms.Timer(Me.components)
         Me.timerLogs = New System.Windows.Forms.Timer(Me.components)
+        Me.timerPC = New System.Windows.Forms.Timer(Me.components)
         Me.NsTheme1 = New SAMP_Keybinder_Evolution.NSTheme()
         Me.btnLaunch = New SAMP_Keybinder_Evolution.NSButton()
         Me.CBtnMin = New SAMP_Keybinder_Evolution.NSControlButton()
@@ -254,7 +255,6 @@ Partial Class Form1
         Me.NsContextMenu1 = New SAMP_Keybinder_Evolution.NSContextMenu()
         Me.ShowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.timerPC = New System.Windows.Forms.Timer(Me.components)
         Me.NsTheme1.SuspendLayout()
         CType(Me.imgLogo2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NsTabControl1.SuspendLayout()
@@ -287,6 +287,10 @@ Partial Class Form1
         '
         Me.timerLogs.Enabled = True
         Me.timerLogs.Interval = 5000
+        '
+        'timerPC
+        '
+        Me.timerPC.Enabled = True
         '
         'NsTheme1
         '
@@ -3170,10 +3174,6 @@ Partial Class Form1
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
-        '
-        'timerPC
-        '
-        Me.timerPC.Enabled = True
         '
         'Form1
         '

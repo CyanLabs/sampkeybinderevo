@@ -123,11 +123,14 @@
   <metadata name="timerLogs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>263, 17</value>
   </metadata>
+  <metadata name="timerPC.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>614, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="imgLogo2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAogAAABUCAIAAACOSFGQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAD/jElEQVR4XtT9
+        vwAADr8BOAVTJAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAD/jElEQVR4XtT9
         BXwV1/Y+jAd3KO4aLBAkIQQS4sk5Z+Rozom7ewKBECMQCBKc4i016t5Sd3e7vZWr7a0bbWkpRSP8n7XX
         nMlJgF55f5/3/f3n+3znrtmzZe2191rPXpOEelktkt2mxjosLqcNiI9zAAnxsUCcy44S3FHCsjPWipo2
         q2K1qBazoiqSLBlNxhjAaIiOjoqIigyPjAjDHYgIDw0PCwkLDQ4PC4aMt4aYKNREE1UxWswSYFZNZtUI
@@ -7860,9 +7863,6 @@ Source can be found at http://github.com/cyanlabs/sampkeybindevo.
         AAD8HwAA/l8AAP7/AAD+/wAA
 </value>
   </data>
-  <metadata name="timerPC.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>614, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAAAAAAAEAIAAoIAQAVgAAAICAAAABACAAKAgBAH4gBAAwMAAAAQAgAKglAACmKAUAICAAAAEA

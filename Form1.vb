@@ -532,7 +532,7 @@ Public Class Form1
     End Sub
 
     'Autoupdate check change
-    Private Sub chkAutoupdates_CheckedChanged(sender As Object)
+    Private Sub chkAutoupdates_CheckedChanged(sender As Object) Handles chkAutoUpdates.CheckedChanged
         Try
             inisettings.WriteString("Settings", "AutoUpdate", sender.checked.ToString)
         Catch ex As NullReferenceException
